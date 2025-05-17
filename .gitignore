@@ -20,4 +20,4 @@ pycache/ *.py[cod] *$py.class
 
 Distribution / packaging
 
-.Python build/ dist/ *.egg-info/
+.Python build/ dist/ *.egg-info/venv/
