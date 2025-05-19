@@ -1,23 +1,23 @@
-Python virtual environment
+# Python virtual environment
+venv/
+.env/
 
-venv/ .env/
-
-Data files
-
-data/ *.csv *.ipynb_checkpoints/
-
-Jupyter notebooks checkpoints
+data/
+*.csv
+*.ipynb_checkpoints/
 
 notebooks/*.ipynb_checkpoints/
 
-IDE settings
-
+# IDE settings
 .vscode/
 
-Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
 
-pycache/ *.py[cod] *$py.class
-
-Distribution / packaging
-
-.Python build/ dist/ *.egg-info/venv/
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+venv/
