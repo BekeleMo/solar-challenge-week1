@@ -4,7 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import sys
 sys.path.append("C:/Users/bekel/Desktop/Channel/10 Academy/solar-challenge-week1/app")  # Add app directory to path
-from utils import load_data, plot_ghi_boxplot, get_top_regions  # Absolute import
+from utils import load_data, plot_ghi_boxplot, get_top_regions
+
+# Debug: Check data loading
+data = load_data()
+st.write("Data loaded:", data.head())  # Add this line to inspect the first few rows
 
 # Title and description
 st.title("Solar Irradiance Dashboard")
@@ -18,7 +22,7 @@ selected_countries = st.sidebar.multiselect(
     default=["Benin", "Sierra Leone", "Togo"]
 )
 
-# Load data
+# Load data (again, in case of filtering)
 data = load_data()
 filtered_data = data[data["Country"].isin(selected_countries)]
 
